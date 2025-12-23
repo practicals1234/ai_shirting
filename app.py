@@ -8,7 +8,7 @@ st.set_page_config(page_title="Shirting AI", page_icon="👔", layout="centered"
 
 # 2. Initialize Client
 # Note: Use your actual key from AI Studio
-API_KEY = st.secrets.get("GEMINI_API_KEY", "your-api-key-here")
+API_KEY = st.secrets["GEMINI_API_KEY"]
 client = genai.Client(api_key=API_KEY)
 
 st.title("👔 Shirting AI Stylist")
