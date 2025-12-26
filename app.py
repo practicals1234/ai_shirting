@@ -89,7 +89,7 @@ st.markdown("""
     .stButton>button { width: 100%; border-radius: 10px; height: 3em; font-weight: bold; }
     .stCameraInput { margin-bottom: 20px; }
     </style>
-""", unsafe_allow_javascript=True)
+""", unsafe_allow_html=True) # <--- Use this instead
 
 # --- 2. AUTHENTICATION & CLIENT ---
 # Set this in your Streamlit Cloud Secrets or .env file
