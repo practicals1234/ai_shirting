@@ -185,4 +185,4 @@ if captured_file:
                     st.error(f"Something went wrong: {e}")
 
 st.divider()
-st.caption("PWA Mode: Open in Safari > Share > Add to Home Screen")
+st.caption("Created by SUHANI!")
