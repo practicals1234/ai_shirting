@@ -140,7 +140,7 @@ if captured_file:
     if st.button("Step 2: Generate High-Def Asset ✨", type="primary"):
         selected_model = "gemini-3-pro-image-preview" if "Gemini 3" in model_choice else "gemini-2.5-flash-image"
         
-        with st.spinner(f"AI Stylist is thinking (Using {model_choice})..."):
+        with st.spinner(f"Generating your image..."):
             try:
                 # Core Generation Call
                 response = client.models.generate_content(
