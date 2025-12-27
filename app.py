@@ -91,6 +91,25 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True) # <--- Use this instead
 
+def check_access():
+    if "authenticated" not in st.session_state:
+        st.session_state.authenticated = False
+
+    if not st.session_state.authenticated:
+        st.title("🔒 Restricted Access")
+        pwd = st.text_input("Enter access password", type="password")
+
+        if pwd:
+            if pwd == st.secrets["APP_PASSWORD"]:
+                st.session_state.authenticated = True
+                st.rerun()
+            else:
+                st.error("Incorrect password")
+
+        st.stop()
+
+check_access()
+
 # --- 2. AUTHENTICATION & CLIENT ---
 # Set this in your Streamlit Cloud Secrets or .env file
 API_KEY = st.secrets.get("GEMINI_API_KEY", "YOUR_API_KEY_HERE")
