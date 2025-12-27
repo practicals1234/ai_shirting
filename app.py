@@ -117,7 +117,7 @@ client = genai.Client(api_key=API_KEY)
 
 # Track usage for the ₹100 budget
 if "total_spent_inr" not in st.session_state:
-    st.session_state.total_spent_inr = 0.0
+    st.session_state.total_spent_inr = 159
 
 # --- 3. UI - HEADER ---
 st.title("👔 Textile AI Studio")
@@ -137,7 +137,7 @@ with st.sidebar:
     )
     
     st.divider()
-    st.metric("Budget Used", f"₹{st.session_state.total_spent_inr:.2f}", "of ₹100.00")
+    st.metric("Budget Used", f"₹{st.session_state.total_spent_inr:.2f}", "of ₹1000.00")
     st.caption("Pro: ~₹11.20 / shot | Nano: ~₹3.20 / shot")
 
 # --- 4. STYLE PROMPT ENGINE ---
